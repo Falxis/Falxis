@@ -1,0 +1,233 @@
+::selection {
+  visibility: hidden;
+}
+* {
+  font-family: "Armata", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --black: rgb(0, 0, 0);
+  --white: #fff;
+  --bleu: rgb(72, 98, 184);
+  --gris: rgb(36, 36, 36);
+  --jaune: yellow;
+  --marin: rgb(52, 72, 136);
+  --border-header-radius: 35px;
+}
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: -webkit-fill-available;
+  margin: 10px;
+  padding: 20px 50px;
+  z-index: 10000;
+  background: var(--marin);
+  border-radius: var(--border-header-radius);
+  opacity: 0.8;
+}
+header .logo {
+  display: inline-flex;
+  position: relative;
+  color: var(--black);
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 0, 05em;
+  text-transform: uppercase;
+}
+img {
+  width: 50px;
+}
+h1 {
+  font-size: 5em;
+}
+a {
+  text-decoration: none;
+}
+.rightSide {
+  display: flex;
+}
+.btns {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.btns ion-icon {
+  font-size: 3em;
+  color: var(--jaune);
+}
+.btns .menuToggle {
+  font-size: 3em;
+}
+.btns .darknlight {
+  font-size: 3em;
+}
+.btns ion-icon:nth-child(2) {
+  display: none;
+}
+.btns.active ion-icon:nth-child(2) {
+  display: block;
+}
+.btns.active ion-icon:nth-child(1) {
+  display: none;
+}
+body {
+  background-color: var(--bleu);
+  color: var(--black);
+}
+.dark {
+  background-color: var(--gris);
+  color: var(--bleu);
+}
+.naviguation {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+  transition: left 0.5s;
+}
+.naviguation.active {
+  left: 0%;
+  background: var(--bleu);
+}
+.naviguation.active.dark {
+  background: var(--gris);
+  color: var(--bleu);
+}
+
+.naviguation li {
+  list-style: none;
+}
+
+.naviguation li a {
+  position: relative;
+  display: inline-flex;
+  margin: 5px 0;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: var(--black);
+  background: var(--white);
+  padding: 5px 20px;
+  border-radius: 40px;
+  transition: all 0.5s;
+}
+.naviguation.dark li a {
+  background: var(--bleu);
+  color: var(--white);
+}
+.naviguation.dark li a:hover {
+  background: var(--white);
+  color: var(--black);
+}
+.naviguation li a:hover {
+  background: var(--gris);
+  color: var(--white);
+}
+.clicked {
+}
+.padding {
+  padding: 185px 0px;
+}
+.texte {
+  z-index: 4;
+  padding: 2rem;
+  opacity: 1;
+  position: relative;
+  transition: opacity 0.5s;
+  left: 140px;
+  top: 140px;
+  max-width: 960px;
+  visibility: visible;
+}
+.texte.active {
+  opacity: 0;
+  visibility: hidden;
+}
+.texte h1 {
+  color: var(--black);
+  transition: all 0.5s;
+}
+.texte.dark h1 {
+  color: var(--bleu);
+}
+.texte h1:hover {
+  color: var(--white);
+}
+.texte span {
+  color: var(--black);
+  transition: all 0.5s;
+}
+.texte.dark span {
+  color: var(--bleu);
+  transition: all 0.5s;
+}
+.texte span:hover {
+  color: var(--white);
+}
+.projets h1 {
+  margin-bottom: 50px;
+}
+.projets img {
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  border-radius: 20px;
+}
+.projets img:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.content {
+  color: white;
+  position: relative;
+  margin: 15px 10px;
+  width: 300px;
+  height: 180px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 100%;
+  opacity: 0;
+  border-radius: 20px;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.678);
+}
+.text-layer {
+  z-index: 6;
+  color: white;
+  text-align: center;
+  font-size: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.container {
+  display: flex;
+}
+.content:hover .overlay {
+  opacity: 1;
+}
+
+.about {
+}
