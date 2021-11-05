@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="ressources/logo af beta.png" />
+  <link rel="stylesheet" href="ressources/style.css" />
+  <link rel="stylesheet" href="ressources/scroll.css" />
+  <title>| Alexis Fiolleau |</title>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo"><img src="ressources/logo af beta.png" alt=""></a>
+    <div class="rightSide">
+      <div class="btns darknlight">
+        <ion-icon name="moon-outline"></ion-icon>
+        <ion-icon name="sunny-outline"></ion-icon>
+      </div>
+      <div class="btns menuToggle">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+      </div>
+    </div>
+  </header>
+  <ul class="naviguation">
+    <li><a href="#" class="clicked">Home</a></li>
+    <li><a href="#about" class="clicked">About</a></li>
+    <li><a href="#" class="clicked">Contact me</a></li>
+  </ul>
+  <div class="texte">
+    <div class="presentation padding">
+      <h1>
+        <span>Hi,</span><br>
+        <span>I'm Alexis,</span><br>
+        <span>a student developer.</span>
+      </h1>
+    </div>
+    <div class="projets padding"><br>
+      <h1>My projects</h1>
+      <div class="container">
+        <div class="content">
+          <img src=" ressources/raspberry.jpg" alt="">
+          <div class="overlay">
+            <div class="text-layer">C and C++</div>
+          </div>
+        </div>
+        <div class="content">
+          <img src="ressources/html.jpg" alt="">
+          <div class="overlay">
+            <div class="text-layer">Prog</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about padding"><br><br>
+      <a href="#" name="about">
+        <h1>About me </h1>
+      </a>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa non et repellendus ea vel distinctio
+        voluptatibus consequuntur totam accusamus odio mollitia autem nulla perspiciatis minus, tenetur sunt numquam!
+        Ut?</p>
+    </div>
+  </div>
+  <script>
+    let menuToggle = document.querySelector('.menuToggle')
+    let naviguation = document.querySelector('.naviguation')
+    let texte = document.querySelector('.texte')
+    let darknlight = document.querySelector('.darknlight')
+    let body = document.querySelector('body')
+    let clicked = document.querySelector('.clicked')
+    clicked.onclick = function () {
+      naviguation.classList.remove('active')
+      texte.classList.remove('active')
+    }
+    darknlight.onclick = function () {
+      darknlight.classList.toggle('active')
+      body.classList.toggle('dark')
+      naviguation.classList.toggle('dark')
+      texte.classList.toggle('dark')
+    }
+    menuToggle.onclick = function () {
+
+      menuToggle.classList.toggle('active')
+      naviguation.classList.toggle('active')
+      texte.classList.toggle('active')
+    }
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
